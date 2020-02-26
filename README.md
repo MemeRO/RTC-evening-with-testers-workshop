@@ -14,7 +14,7 @@ git init
 ```
 followed by
 ```
-git clone https://github.com/rariciuc/EWT-auto-wks.git
+git clone https://github.com/rariciuc/RTC-evening-with-testers-workshop.git
 ```
 ### Prerequisites test
 To test your pre-requisites setup you can execute the following command in your cloned git repo (where the pom.xml file is located)
