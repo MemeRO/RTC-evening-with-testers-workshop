@@ -7,8 +7,8 @@
 * [Java JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) - Automation Framework Language
 
 ## Getting started
-Create folder of your choice to use as a workspace and git repo  
-In the created folder open a terminal with git support and do
+Create a folder of your choice to use as a workspace and git repo  
+In the created folder open a terminal with GIT support and execute
 ```
 git init
 ```
