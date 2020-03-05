@@ -4,7 +4,7 @@ import pages.NewUserPage;
 import org.openqa.selenium.WebDriver;
 
 public class NewUserActions {
-    public WebDriver driver;
+    private WebDriver driver;
 
     public NewUserActions(WebDriver driver) {
         this.driver = driver;

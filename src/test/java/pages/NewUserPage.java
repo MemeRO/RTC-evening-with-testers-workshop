@@ -5,17 +5,17 @@ import org.openqa.selenium.WebDriver;
 
 public class NewUserPage {
 
-    public WebDriver driver;
+    private WebDriver driver;
 
     public NewUserPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    By backBtn = By.xpath("//app-employee-form/button/span[@class='mat-button-wrapper']");
-    By firstNameInput = By.xpath("//input[@placeholder='first name']");
-    By lastNameInput = By.xpath("//input[@placeholder='last name']");
-    By termsAndConditionsCheckbox = By.xpath("//span[text()='I agree with the terms']");
-    By submitBtn = By.xpath("//button/span[text()='Submit']");
+    private By backBtn = By.xpath("//app-employee-form/button/span[@class='mat-button-wrapper']");
+    private By firstNameInput = By.xpath("//input[@placeholder='first name']");
+    private By lastNameInput = By.xpath("//input[@placeholder='last name']");
+    private By termsAndConditionsCheckbox = By.xpath("//span[text()='I agree with the terms']");
+    private By submitBtn = By.xpath("//button/span[text()='Submit']");
 
     public String getBackBtnText() {
         return driver.findElement(backBtn).getText();

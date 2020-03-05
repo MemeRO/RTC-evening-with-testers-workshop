@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginActions {
 
-    public WebDriver driver;
+    private WebDriver driver;
 
     public LoginActions(WebDriver driver) {
         this.driver = driver;

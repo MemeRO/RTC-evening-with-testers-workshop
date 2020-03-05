@@ -7,15 +7,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utility.Constants;
 
 public class UsersDashboardPage {
-    public WebDriver driver;
+    private WebDriver driver;
 
     public UsersDashboardPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    By loggedUserMessage = By.xpath("//div[@class='welcome']");
-    By newUserBtn = By.xpath("//button/span[text()='New user']");
-    By lastFirsNameCell = By.xpath("//tbody/tr[last()]/td[1]");
+    private By loggedUserMessage = By.xpath("//div[@class='welcome']");
+    private By newUserBtn = By.xpath("//button/span[text()='New user']");
+    private By lastFirsNameCell = By.xpath("//tbody/tr[last()]/td[1]");
 
     public String getUserMessage() {
         WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT);

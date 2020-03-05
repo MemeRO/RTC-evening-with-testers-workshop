@@ -5,16 +5,16 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 
-    public WebDriver driver;
+    private WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    By usernameField = By.xpath("//input[@placeholder='email']");
-    By passwordField = By.xpath("//input[@placeholder='password']");
-    By loginBtn = By.xpath("//button/span[text()='Login']");
-    By loginError = By.xpath("//snack-bar-container/app-snack/span");
+    private By usernameField = By.xpath("//input[@placeholder='email']");
+    private By passwordField = By.xpath("//input[@placeholder='password']");
+    private By loginBtn = By.xpath("//button/span[text()='Login']");
+    private By loginError = By.xpath("//snack-bar-container/app-snack/span");
 
     public void enterUser(String userName) {
         driver.findElement(usernameField).sendKeys(userName);
