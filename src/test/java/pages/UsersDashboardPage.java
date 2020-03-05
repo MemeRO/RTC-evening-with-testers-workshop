@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utility.Constants;
 
 public class UsersDashboardPage {
     public WebDriver driver;
@@ -17,7 +18,7 @@ public class UsersDashboardPage {
     By lastFirsNameCell = By.xpath("//tbody/tr[last()]/td[1]");
 
     public String getUserMessage() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT);
         wait.until(ExpectedConditions.visibilityOfElementLocated(loggedUserMessage));
         return driver.findElement(loggedUserMessage).getText();
     }

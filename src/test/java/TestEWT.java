@@ -1,8 +1,8 @@
 import org.junit.AfterClass;
 import org.junit.Test;
 import pages.BaseApp;
-
-import java.util.Random;
+import utility.Messages;
+import utility.Util;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -10,9 +10,9 @@ import static org.junit.Assert.assertTrue;
 public class TestEWT extends BaseApp {
 
     @Test
-    public void RegisterUser() {
-        driver.get("http://89.33.132.18:8787/");
-        assertEquals("EmpApp", driver.getTitle());
+    public void registerUser() {
+        driver.get(configReader.getAppURL());
+        assertEquals(Messages.APPLICATION_TITLE, driver.getTitle());
 
         loginActions.login("aaa@aaa.com", "aaaaa");
         assertEquals("Welcome: aaa@aaa.com", usersDashboardPage.getUserMessage());
@@ -20,26 +20,21 @@ public class TestEWT extends BaseApp {
         usersDashboardPage.clickNewUser();
         assertEquals("< back", newUserPage.getBackBtnText());
 
-        String firsName = "lalala" + generateRandomInt(1000);
+        String firsName = "lalala" + Util.generateRandomInt(1000);
         newUserActions.addNewUser(firsName, "tra");
         assertEquals(firsName, usersDashboardPage.lastFirsNameCell());
     }
 
     @Test
     public void loginWithInvalidUser() {
-        driver.get("http://89.33.132.18:8787/");
-        assertEquals("EmpApp", driver.getTitle());
+        driver.get(configReader.getAppURL());
+        assertEquals(Messages.APPLICATION_TITLE, driver.getTitle());
         loginActions.login("bbbb@aaa.com", "aaaaa");
-        assertTrue(loginPage.getLoginError().contains("Problem signing in"));
+        assertTrue(loginPage.getLoginError().contains(Messages.LOGIN_ERROR_INVALID_USER));
     }
 
     @AfterClass
     public static void BrowserClose() {
         driver.quit();
-    }
-
-    public static int generateRandomInt(int upperRange) {
-        Random random = new Random();
-        return random.nextInt(upperRange);
     }
 }
