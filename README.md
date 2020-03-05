@@ -7,12 +7,8 @@
 * [Java JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) - Automation Framework Language
 
 ## Getting started
-Create a folder of your choice to use as a workspace and git repo  
+Create a folder of your choice
 In the created folder open a terminal with GIT support and execute
-```
-git init
-```
-followed by
 ```
 git clone https://github.com/rariciuc/RTC-evening-with-testers-workshop.git
 ```
